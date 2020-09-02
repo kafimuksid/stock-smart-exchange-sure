@@ -1,6 +1,6 @@
 # stock_smart_exchange_sure
 
-A new Flutter project.
+A Flutter project to display stock market bulk data in table form and also the option for selective data visualization with OHCL chart.
 
 ## Getting Started
 
