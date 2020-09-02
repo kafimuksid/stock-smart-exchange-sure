@@ -4,6 +4,12 @@ import 'dart:convert';
 import './chart.dart';
 
 var mydata;
+List tradename;
+List datelist;
+List hilist;
+List lolist;
+List openlist;
+List closelist;
 
 Future goToSurveyForm(context) async {
   Navigator.push(
@@ -140,7 +146,7 @@ class HomeScreenState extends State<HomeScreen> {
                       icon: Icon(Icons.multiline_chart),
                       label: Text(
                         'See OHLC Chart',
-                        style: TextStyle(color: Colors.blueGrey[800]),
+                        style: TextStyle(color: Colors.blueGrey[900]),
                       ),
                       backgroundColor: Colors.orangeAccent,
                     ),
@@ -163,3 +169,49 @@ class HomeScreenState extends State<HomeScreen> {
             ));
   }
 }
+
+void tradeNameFun() {
+  // THis function was made for easier access to the trade names
+  for (int i = 0; i < mydata.length; i++) {
+    if (mydata[i]['trade_code'] != null ||
+        mydata[i]['trade_code'] != mydata[i - 1]['trade_code']) {
+      tradename.add(mydata[i]['trade_code']);
+    }
+  }
+}
+
+/*void dateFun() {
+  for (int i = 0; i < mydata.length; i++) {
+    if (mydata[i]['date'] != null ||
+        mydata[i]['date'] != mydata[i - 1]['date']) {
+      datelist.add(mydata[i]['date']);
+    }
+  }
+}
+
+void tradeNameFun() {
+  for (int i = 0; i < mydata.length; i++) {
+    if (mydata[i]['trade_code'] != null ||
+        mydata[i]['trade_code'] != mydata[i - 1]['trade_code']) {
+      tradename.add(mydata[i]['trade_code']);
+    }
+  }
+}
+
+void tradeNameFun() {
+  for (int i = 0; i < mydata.length; i++) {
+    if (mydata[i]['trade_code'] != null ||
+        mydata[i]['trade_code'] != mydata[i - 1]['trade_code']) {
+      tradename.add(mydata[i]['trade_code']);
+    }
+  }
+}
+
+void tradeNameFun() {
+  for (int i = 0; i < mydata.length; i++) {
+    if (mydata[i]['trade_code'] != null ||
+        mydata[i]['trade_code'] != mydata[i - 1]['trade_code']) {
+      tradename.add(mydata[i]['trade_code']);
+    }
+  }
+}*/
