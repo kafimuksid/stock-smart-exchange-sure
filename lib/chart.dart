@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+//import 'package:syncfusion_flutter_charts/charts.dart';
 //import 'package:intl/intl.dart';
 
 //import './splash_screen.dart';
-import './home.dart';
+//import './home.dart';
 
 class StockChart extends StatefulWidget {
   @override
@@ -15,11 +15,11 @@ class _StockChartState extends State<StockChart> {
 
   @override
   Widget build(BuildContext context) {
-    tradeNameFun();
+    //tradeNameFun();
     return Scaffold(
         appBar: AppBar(
             centerTitle: true,
-            title: Text('Stock Smart Exchange Sure',
+            title: Text('SSES',
                 style: TextStyle(
                     fontFamily: 'ASafePlacetoFall',
                     fontSize: 30.0,
@@ -28,13 +28,23 @@ class _StockChartState extends State<StockChart> {
           children: [
             Center(
               child: Container(
-                height: 450,
-                //child: Text('This is Chart Container'),
-                child: SfCartesianChart(
+                  height: 450,
+                  //child: Text('This is Chart Container'),
+                  child:
+                      /*SfCartesianChart(
                     //                        This is where the chart magic was supposed to happen. Unfortunately I couldn't figure out how
                     //primaryXAxis: ,
+                    ),*/
+                      Container(
+                    padding: EdgeInsets.all(20.0),
+                    child: Text(
+                      ' Aww snap! Unfortunately this page is under Construction...',
+                      style: TextStyle(
+                          fontFamily: 'ArchitectsDaughter',
+                          fontSize: 20.0,
+                          color: Colors.orangeAccent),
                     ),
-              ),
+                  )),
             ),
             Center(
               child: Container(
@@ -51,7 +61,7 @@ class _StockChartState extends State<StockChart> {
                     items: [
                       DropdownMenuItem(
                         child: Text(
-                            "First Item"), //Unfortunately I couldn't Add the trade names in the dropdown items
+                            "Trade Names"), //Unfortunately I couldn't Add the trade names in the dropdown items
                         value: 1,
                       ),
                       DropdownMenuItem(
