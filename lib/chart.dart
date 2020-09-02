@@ -10,6 +10,17 @@ class StockChart extends StatefulWidget {
 class _StockChartState extends State<StockChart> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text('Stock Smart Exchange Sure',
+              style: TextStyle(
+                  fontFamily: 'ASafePlacetoFall',
+                  fontSize: 30.0,
+                  color: Colors.white))),
+      body: Container(
+        child: Text('This is Chart Page'),
+      ),
+    );
   }
 }
